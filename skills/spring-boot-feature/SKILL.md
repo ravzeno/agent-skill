@@ -7,7 +7,7 @@ description: Implement or extend Java Spring Boot backend features, APIs, integr
 
 Use this skill when a task asks to add or change backend behavior in a Java Spring Boot service: REST endpoints, request and response models, validation, business rules, persistence, integrations, mappings, configuration, or service-level features.
 
-For a request limited to diagnosing an existing failure, use `backend-debugging`. For a review without implementation, use `backend-code-review`. For a read-only assessment of likely affected code, use `change-impact-analysis`.
+For a request limited to diagnosing an existing failure, use `diagnosing-bugs`. For a review without implementation, use `code-review`. For a read-only assessment of likely affected code, use `change-impact-analysis`.
 
 ## Start with the repository
 

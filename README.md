@@ -21,15 +21,19 @@ templates/
 
 ## Skills
 
+### General development
+
+- [`diagnosing-bugs`](skills/diagnosing-bugs/SKILL.md) — สืบหาสาเหตุของบั๊กจากอาการและหลักฐาน พร้อมเสนอหรือแก้จุดต้นเหตุอย่างแคบ
+- [`code-review`](skills/code-review/SKILL.md) — รีวิว diff เพื่อหาบั๊ก regression และความเสี่ยง โดยรายงานเป็น findings พร้อมหลักฐาน
+
 ### Git workflow
 
 - [`push`](skills/push/SKILL.md) — ตรวจ เตรียม commit และ push การเปลี่ยนแปลงเมื่อผู้ใช้สั่ง
+- [`release-changelog`](skills/release-changelog/SKILL.md) — เทียบ version tags แล้วสรุปและสร้าง changelog ของสิ่งที่เพิ่ม แก้ไข ลบ หรือย้าย
 
 ### Backend development
 
 - [`spring-boot-feature`](skills/spring-boot-feature/SKILL.md) — เพิ่มหรือขยายฟีเจอร์ Java/Spring Boot ตาม conventions ของ service
-- [`backend-debugging`](skills/backend-debugging/SKILL.md) — หาสาเหตุและแก้ปัญหา runtime, dependency injection, build, generated code, query หรือ test
-- [`backend-code-review`](skills/backend-code-review/SKILL.md) — รีวิวโค้ด backend เพื่อหาบั๊ก regression, ความเสี่ยง และพฤติกรรมที่ขาด
 - [`change-impact-analysis`](skills/change-impact-analysis/SKILL.md) — ไล่ผลกระทบต่อ callers, contract, business flow, data, config และ tests
 - [`local-dev-setup`](skills/local-dev-setup/SKILL.md) — จัดเตรียมวิธีรัน service ในเครื่อง รวม Compose และ environment config
 
@@ -46,7 +50,7 @@ templates/
 เมื่อเผยแพร่คลังนี้เป็น GitHub repository แล้ว ผู้ใช้ติดตั้ง skill เดียวเข้า Codex ได้ด้วย [Vercel Skills CLI](https://www.skills.sh/docs/cli):
 
 ```bash
-npx skills add YOUR_GITHUB_USERNAME/agent-skill --skill backend-debugging --agent codex
+npx skills add YOUR_GITHUB_USERNAME/agent-skill --skill diagnosing-bugs --agent codex
 ```
 
 ดูรายชื่อ skill ที่ติดตั้งได้:
@@ -59,7 +63,7 @@ npx skills add YOUR_GITHUB_USERNAME/agent-skill --list
 
 ```bash
 npx skills add YOUR_GITHUB_USERNAME/agent-skill --all --agent codex
-npx skills add YOUR_GITHUB_USERNAME/agent-skill --skill backend-debugging --agent codex --global
+npx skills add YOUR_GITHUB_USERNAME/agent-skill --skill diagnosing-bugs --agent codex --global
 ```
 
 อัปเดต skill ที่ติดตั้งจากแหล่งเดิม:

@@ -7,7 +7,7 @@ description: Trace the likely effects of a proposed or completed backend change 
 
 Use this skill when the user asks what a code change may affect, whether a change is safe, what else needs updating, or what to inspect before or after changing a backend service. The default output is a read-only assessment and a focused checklist, not an implementation.
 
-For a concrete defect investigation, use `backend-debugging`. For an actionable review of a diff, use `backend-code-review`. For implementing the requested behavior, use `spring-boot-feature`.
+For a concrete defect investigation, use `diagnosing-bugs`. For an actionable review of a diff, use `code-review`. For implementing the requested behavior, use `spring-boot-feature`.
 
 ## Define the change and baseline
 

@@ -7,7 +7,7 @@ description: Inspect and prepare a backend service's local development setup, in
 
 Use this skill when the user asks how to run a service locally, fix a local startup setup, add or update Docker Compose, identify required environment variables, or document local build and run steps.
 
-For diagnosing a specific application failure after startup, use `backend-debugging`. For application feature implementation, use `spring-boot-feature`.
+For diagnosing a specific application failure after startup, use `diagnosing-bugs`. For application feature implementation, use `spring-boot-feature`.
 
 ## Inspect before changing setup
 
