@@ -21,21 +21,30 @@ templates/
 
 ## Skills
 
+เรียกใช้ skill ได้โดยบอกชื่อหรืออธิบายงานให้ตรงกับขอบเขตของ skill เช่น “ใช้ `diagnosing-bugs` ช่วยหาสาเหตุ error นี้” หรือ “ช่วยรีวิว diff นี้ด้วย `code-review`” ถ้า skill ถูกติดตั้งและตรงกับคำขอ Codex ก็สามารถเลือกใช้ให้อัตโนมัติได้
+
 ### General development
 
-- [`diagnosing-bugs`](skills/diagnosing-bugs/SKILL.md) — สืบหาสาเหตุของบั๊กจากอาการและหลักฐาน พร้อมเสนอหรือแก้จุดต้นเหตุอย่างแคบ
-- [`code-review`](skills/code-review/SKILL.md) — รีวิว diff เพื่อหาบั๊ก regression และความเสี่ยง โดยรายงานเป็น findings พร้อมหลักฐาน
+| Skill | ทำอะไร | ใช้เมื่อ / ตัวอย่างการเรียก |
+| --- | --- | --- |
+| [`diagnosing-bugs`](skills/diagnosing-bugs/SKILL.md) | ไล่หาสาเหตุของ error, บั๊ก, build ล้มเหลว, งานค้าง หรือพฤติกรรมที่เปลี่ยนไป โดยอาศัยหลักฐานจากโค้ดและการรันจริง | เมื่อมีอาการผิดปกติ เช่น “ใช้ `diagnosing-bugs` หาสาเหตุที่ endpoint นี้ตอบ 500” |
+| [`feature-workflow`](skills/feature-workflow/SKILL.md) | ทำ feature ตั้งแต่เข้าใจ requirement ไปจนถึง implementation, รีวิวแยก และตรวจสอบตามเกณฑ์รับงาน | เมื่ออยากให้ทำ feature แบบครบขั้นตอน เช่น “ใช้ `feature-workflow` เพิ่มระบบค้นหาตามเงื่อนไขนี้” |
+| [`code-review`](skills/code-review/SKILL.md) | ตรวจ diff, branch, commit หรือ PR เพื่อหาบั๊ก regression ช่องโหว่ และพฤติกรรมที่ขาด พร้อมรายงานเป็น findings | เมื่อต้องการรีวิวโดยยังไม่ให้แก้โค้ด เช่น “ใช้ `code-review` รีวิว diff ปัจจุบัน” |
 
 ### Git workflow
 
-- [`push`](skills/push/SKILL.md) — ตรวจ เตรียม commit และ push การเปลี่ยนแปลงเมื่อผู้ใช้สั่ง
-- [`release-changelog`](skills/release-changelog/SKILL.md) — เทียบ version tags แล้วสรุปและสร้าง changelog ของสิ่งที่เพิ่ม แก้ไข ลบ หรือย้าย
+| Skill | ทำอะไร | ใช้เมื่อ / ตัวอย่างการเรียก |
+| --- | --- | --- |
+| [`push`](skills/push/SKILL.md) | ตรวจและเตรียมเฉพาะไฟล์ที่เกี่ยวข้อง ก่อน commit และ push ตามขั้นตอนยืนยันข้อความ commit | เมื่อสั่งให้เผยแพร่การเปลี่ยนแปลง เช่น “ใช้ `push` commit และ push งานนี้” |
+| [`release-changelog`](skills/release-changelog/SKILL.md) | เทียบ Git version tags แล้วสรุปการเปลี่ยนแปลง และสร้างหรืออัปเดต changelog | เมื่อทำ release หรืออยากดูความต่างของเวอร์ชัน เช่น “ใช้ `release-changelog` ทำ release notes จาก tag v1.2.0” |
 
 ### Backend development
 
-- [`spring-boot-feature`](skills/spring-boot-feature/SKILL.md) — เพิ่มหรือขยายฟีเจอร์ Java/Spring Boot ตาม conventions ของ service
-- [`change-impact-analysis`](skills/change-impact-analysis/SKILL.md) — ไล่ผลกระทบต่อ callers, contract, business flow, data, config และ tests
-- [`local-dev-setup`](skills/local-dev-setup/SKILL.md) — จัดเตรียมวิธีรัน service ในเครื่อง รวม Compose และ environment config
+| Skill | ทำอะไร | ใช้เมื่อ / ตัวอย่างการเรียก |
+| --- | --- | --- |
+| [`spring-boot-feature`](skills/spring-boot-feature/SKILL.md) | เพิ่มหรือปรับ API, business logic, persistence หรือ integration ใน Java/Spring Boot โดยยึด conventions ของ service | เมื่อมี feature เฉพาะ Spring Boot เช่น “ใช้ `spring-boot-feature` เพิ่ม endpoint สำหรับ…” |
+| [`change-impact-analysis`](skills/change-impact-analysis/SKILL.md) | วิเคราะห์ว่าการเปลี่ยน backend อาจกระทบ callers, API contract, business flow, data, config และ tests ตรงไหนบ้าง | เมื่ออยากประเมินผลก่อนหรือหลังแก้โค้ด เช่น “ใช้ `change-impact-analysis` วิเคราะห์ผลกระทบของ diff นี้” |
+| [`local-dev-setup`](skills/local-dev-setup/SKILL.md) | ตรวจและจัดทำขั้นตอนรัน backend ในเครื่อง รวม dependency, Docker Compose และ environment variables | เมื่อต้องเตรียม dev environment เช่น “ใช้ `local-dev-setup` ช่วยบอกวิธีรัน service นี้ในเครื่อง” |
 
 ## เพิ่ม skill ใหม่
 
